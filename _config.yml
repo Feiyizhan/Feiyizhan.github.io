@@ -17,7 +17,8 @@ date_format:
   archive: "%b"
   categories: "%b-%Y"
   tag: "%b-%Y"
-# Language
+# Language，控制页面是否显示资源，资源文件存放在_data\values
+# en 英文 cn 中文
 lan: "cn" 
 
 paginate: 10
@@ -27,3 +28,12 @@ markdown: kramdown
 gems: ['jekyll-paginate']
 
 exclude: ['README.md', 'LICENSE', "*.bak"]
+
+defaults:
+  -
+    scope:
+      path: ""
+# type值可以是pages(html文件）、posts（）、drafts，不加表示对所有文件生效
+#      type: "pages"  
+    values:
+      author: "Feiyizhan"
