@@ -6,12 +6,10 @@ tags: ['Github Pages','Jekyll','markdown']
 author: Feiyizhan
 description: Github Pages 和 Jekyll的使用
 ---
-
-# Github Pages 和 Jekyll的使用
-
 * TOC
 {:toc}
 
+# Github Pages 和 Jekyll的使用
 
 ## 简介
 
@@ -107,6 +105,7 @@ Jekyll 可以搭建本地Jekyll环境，也可以直接下载一套模版，手�
  5. 用notepad++打开导出的markdown文件，修改替换`(./` 为`({{ site.baseurl }}/assets/images/`
  6. 删除一些无法识别的markdown语句，比如`(@)`、`[toc]`。
  7. 替换[`toc]`为：
+
 ```markdown
 * TOC
 {:toc}
