@@ -13,7 +13,7 @@ description: Github Pages 和 Jekyll的使用
 {:toc}
 
 
-##简介
+## 简介
 
 ### Git简介
 Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。
@@ -33,7 +33,7 @@ GitHub可以托管各种git库的站点。
 
 Github pages 可以通过只提交静态HTML、CSS、JS等资源，也可以通过使用自带的Jekyll引擎，来加工提交的文件。
 
-####两种pages模式
+#### 两种pages模式
 1. User/Organization Pages 个人或公司站点
 
 	1) 使用自己的用户名，每个用户名下面只能建立一个；
@@ -80,7 +80,7 @@ git工具非常多，安装和使用教程也非常多，这里略过不写。
 ### 使用Jekyll
 Jekyll 可以搭建本地Jekyll环境，也可以直接下载一套模版，手动修改，提交github查看效果。
 
-####Jekll本地环境搭建
+#### Jekll本地环境搭建
 参考:
 [Jekyll中国](http://jekyllcn.com)
 
@@ -113,14 +113,14 @@ Jekyll 可以搭建本地Jekyll环境，也可以直接下载一套模版，手�
 ```
 
 
-###xixia 模版介绍
+### xixia 模版介绍
 目录结构
 
 参考：
 [目录结构](http://jekyllcn.com/docs/structure/)
 
 
-####_config.yml
+#### _config.yml
 保存配置数据。很多配置选项都可以直接在命令行中进行设置，但是如果你把那些配置写在这儿，你就不用非要去记住那些命令了。
 系统的默认值如下：
 ```yaml
