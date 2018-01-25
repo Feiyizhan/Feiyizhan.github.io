@@ -53,14 +53,14 @@ Github pages 可以通过只提交静态HTML、CSS、JS等资源，也可以通�
 ### Jekyll
 Jekyll是一种简单的、适用于博客的、静态网站生成引擎。它使用一个模板目录作为网站布局的基础框架，支持Markdown、Textile等标记语言的解析，提供了模板、变量、插件等功能，最终生成一个完整的静态Web站点。说白了就是，只要安装Jekyll的规范和结构，不用写html，就可以生成网站。
 参考：
-[\[jekyll介绍\]](http://jekyllbootstrap.com/lessons/jekyll-introduction.html)
-[\[jekyll on github\]](https://github.com/mojombo/jekyll)
-[\[jekyllbootstrap\]](http://jekyllbootstrap.com/)
+[jekyll介绍](http://jekyllbootstrap.com/lessons/jekyll-introduction.html)
+[jekyll on github](https://github.com/mojombo/jekyll)
+[jekyllbootstrap](http://jekyllbootstrap.com/)
 
-Jekyll使用Liquid模板语言，{{page.title}}表示文章标题，{{content}}表示文章内容。我们可以用两种Liquid标记语言：输出标记（output markup）和标签标记 (tag markup)。输出标记会输出文本（如果被引用的变量存在），而标签标记不会。输出标记是用双花括号分隔，而标签标记是用花括号-百分号对分隔。
+Jekyll使用Liquid模板语言，`{{page.title}}`表示文章标题，`{{content}}`表示文章内容。我们可以用两种Liquid标记语言：输出标记（output markup）和标签标记 (tag markup)。输出标记会输出文本（如果被引用的变量存在），而标签标记不会。输出标记是用双花括号分隔，而标签标记是用花括号-百分号对分隔。
 参考：
-[\[Liquid模板语言\]](https://github.com/shopify/liquid/wiki/liquid-for-designers)
-[\[Liquid模板变量参考\]](https://github.com/mojombo/jekyll/wiki/Template-Data)
+[Liquid模板语言](https://github.com/shopify/liquid/wiki/liquid-for-designers)
+[Liquid模板变量参考](https://github.com/mojombo/jekyll/wiki/Template-Data)
 
 jekyll与github的关系：GitHub Pages一个由 GitHub 提供的用于托管项目主页或博客的服务，jekyll是后台所运行的引擎。
 
@@ -72,7 +72,7 @@ git工具非常多，安装和使用教程也非常多，这里略过不写。
 
 ### 创建个人站点步骤
 参考：
-[\[原\]通过GitHub Pages建立个人站点（详细步骤）- 雨知](http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html)
+[原通过GitHub Pages建立个人站点（详细步骤）- 雨知](http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html)
 
 
 ### 使用Jekyll
