@@ -359,7 +359,7 @@ pom.xml
 
 java代码
 MyWebSocketServer .java:
-```xml
+```java
 import java.net.InetSocketAddress;
 
 import org.java_websocket.WebSocket;
@@ -428,7 +428,7 @@ public class MyWebSocketServer extends WebSocketServer {
 ```
 
 RunServer.java
-```xml
+```java
 public class RunServer {
 
     public static void main(String[] arags){
