@@ -14,7 +14,7 @@ baseurl: ''
 ## default date_format
 date_format: 
   title: "%B-%-d-%Y"
-  archive: "%b"
+  archive: "%-m月"
   categories: "%b-%Y"
   tag: "%b-%Y"
 # Language，控制页面是否显示资源，资源文件存放在_data\values
