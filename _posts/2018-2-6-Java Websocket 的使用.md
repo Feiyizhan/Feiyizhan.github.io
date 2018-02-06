@@ -27,7 +27,7 @@ Server端可以运行在服务端，支持web容器启动
 
 POM.xml :
 Server端只需要一个依赖就可以
-``` xml
+```xml
 		<dependency>
 			<groupId>javax.websocket</groupId>
 			<artifactId>javax.websocket-api</artifactId>
@@ -36,7 +36,7 @@ Server端只需要一个依赖就可以
 ```
 
 java 源码：
-``` java
+```java
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArraySet;
  
@@ -145,7 +145,7 @@ public class MyWebSocket {
 ### Client :
 POM.xml :
 Client端需要三个依赖，其中org.glassfish.tyrus的两个依赖是第三方提供的Client的具体实现。
-``` xml
+```xml
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
@@ -166,7 +166,7 @@ Client端需要三个依赖，其中org.glassfish.tyrus的两个依赖是第三�
 java 源码：
 
 MyClient :
-``` java
+```java
 import java.io.IOException;
 import javax.websocket.ClientEndpoint;
 import javax.websocket.OnError;
@@ -207,7 +207,7 @@ public class MyClient {
 
 
 MyClientApp:
-``` java
+```java
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
