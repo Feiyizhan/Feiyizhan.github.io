@@ -224,7 +224,8 @@ description: 转换Spring + ibatis项目为Spring+mybatis
 
 1. 修改`import com.ibatis.sqlmap.client.SqlMapClient;`的引入为`import org.mybatis.spring.SqlSessionTemplate;`
 
-2. 增加`IbatisSqlMapClient`适配器
+2. 增加`IbatisSqlMapClient`适配器   
+
 ```java
     /**
      * Mybatis和Ibatis转换器，用于Mybatis兼容Ibatis代码
