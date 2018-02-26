@@ -10,19 +10,19 @@ description: 转换Spring + ibatis项目为Spring+mybatis
 {:toc}
 
 # 转换Spring + ibatis项目为Spring+mybatis
-源项目介绍：
-	JDK：1.6
-	Web Server: JBoss5.1
-	Spring：3.2.10
-	ibatis：2.3.4
-	maven：不支持
+源项目介绍：   
+	JDK：1.6   
+	Web Server: JBoss5.1   
+	Spring：3.2.10   
+	ibatis：2.3.4   
+	maven：不支持   
 
-转换后：
-	JDK：1.8
-	Web Server: WildFly 11
-	Spring：3.2.10
-	mybatis：3.3.1
-	maven：支持
+转换后：   
+	JDK：1.8   
+	Web Server: WildFly 11   
+	Spring：3.2.10   
+	mybatis：3.3.1   
+	maven：支持   
 
 ## 环境搭建
 略
@@ -30,28 +30,28 @@ description: 转换Spring + ibatis项目为Spring+mybatis
 ## 项目转换
 
 ### 创建空白的Maven Web项目
-1. 创建空白的Maven项目
+1. 创建空白的Maven项目   
 ![Alt text](/assets/images/java/1519462957419.png)
-
+   
 ![Alt text](/assets/images/java/1519462981895.png)
-
+   
 ![Alt text](/assets/images/java/1519463217495.png)
+   
 
-
-2. 修改项目为Web项目
+2. 修改项目为Web项目   
 ![Alt text](/assets/images/java/1519463892347.png)
-
+   
 ![Alt text](/assets/images/java/1519463924361.png)
-
+   
 ![Alt text](/assets/images/java/1519464153091.png)
-
-3. 在构建路径上增加Web服务器Library
+   
+3. 在构建路径上增加Web服务器Library   
 ![Alt text](/assets/images/java/1519614780677.png)
-
+   
 
 
 ### 配置pom.xml文件
-1. 引入Spring
+1. 引入Spring   
 ``` xml
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -225,7 +225,7 @@ description: 转换Spring + ibatis项目为Spring+mybatis
 1. 修改`import com.ibatis.sqlmap.client.SqlMapClient;`的引入为`import org.mybatis.spring.SqlSessionTemplate;`
 
 2. 增加`IbatisSqlMapClient`适配器
-``` java
+```java
     /**
      * Mybatis和Ibatis转换器，用于Mybatis兼容Ibatis代码
      * @author 
@@ -344,13 +344,13 @@ description: 转换Spring + ibatis项目为Spring+mybatis
 
 
 ### 相关配置修改
-1. web.xml
-修改display-name
+1. web.xml   
+修改display-name   
 ``` xml
  <display-name>demo</display-name>
 ```
-2. 删除ibatis Config文件，并增加mybatis Config文件
-/WEB-INF/mybatis/mybatis-config.xml 内容如下：
+2. 删除ibatis Config文件，并增加mybatis Config文件   
+/WEB-INF/mybatis/mybatis-config.xml 内容如下：   
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
@@ -397,9 +397,9 @@ description: 转换Spring + ibatis项目为Spring+mybatis
 ```
 
 
-3. spring/applicationContext.xml
-修改数据源和数据库操作相关配置
-源：
+3. spring/applicationContext.xml   
+修改数据源和数据库操作相关配置   
+源：   
 ``` xml
 	 <!-- 定义Ibatis SqlMapClientFactoryBean 并Load Sql Map 配置文件 -->
 	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
@@ -418,8 +418,8 @@ description: 转换Spring + ibatis项目为Spring+mybatis
         <property name="sqlMapClient" ref="sqlMapClient"></property>  
     </bean> 
 ```
-
-修改为：
+   
+修改为：   
 ``` xml
 	  <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
 	<bean id="sqlMapClient" class="org.mybatis.spring.SqlSessionFactoryBean">
