@@ -4,7 +4,7 @@
 <script src="{{ site.baseurl }}/assets/js/gitment.browser.js"></script>
 <script>
   var gitment = new Gitment({
-    {% if page.issueId != '' %}
+    {% if page.id and page.issueId %}
     id: '{{ page.issueId }}', // 可选。默认为 location.href
     {% endif %}                        
     owner: 'Feiyizhan',
