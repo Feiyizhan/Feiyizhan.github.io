@@ -1,18 +1,22 @@
 {% include header.html %}
 
 <div class="wrap">
-    <div class="container container-left">
-        <div class="row">
-            <div class="col-xs-3 hidden-xs">
-                {% include sidebar.html %}
+    <div class="content-wrapper">
+        <section class="content">
+            <div class="row">
+                <div class="col-xs-3 hidden-xs">
+                    {% include sidebar.html %}
+                </div>
+                <div class="col-xs-7">
+                    {{ content }}
+                </div>
+                <div class="col-xs-2">
+                    {% include gitment-comments.html %} 
+                </div>
             </div>
-            <div class="col-xs-7">
-                {{ content }}
-            </div>
-            <div class="col-xs-2">
-                {% include gitment-comments.html %} 
-            </div>
-        </div>
+
+		</section>
+
     </div>
 
     {% include footer.html %}
