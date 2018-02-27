@@ -21,6 +21,10 @@ date_format:
 # en 英文 cn 中文
 lan: "cn" 
 
+# 开启评论
+comments:true
+gitment:on
+
 paginate: 10
 
 #[ maruku | rdiscount | kramdown | redcarpet ]

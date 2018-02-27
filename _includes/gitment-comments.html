@@ -1,0 +1,17 @@
+{% if site.comments and site.isso != '' %}
+<div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  //id: '页面 ID', // 可选。默认为 location.href
+  owner: 'Feiyizhan',
+  repo: 'Feiyizhan.github.io',
+  oauth: {
+    client_id: 'd022803a97cc447b6a53',
+    client_secret: '736a42a5755fbb158d3c2d9faf9777c103358421',
+  },
+})
+gitment.render('container')
+</script>
+{% endif %}

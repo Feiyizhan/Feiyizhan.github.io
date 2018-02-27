@@ -71,6 +71,8 @@ layout: default
     {% endunless %}  
 
     </div>
+	{% include gitment-comments.html %} 
+	
     {% if page.comments %}
         {% if site.disqus != '' %}
     <div id="disqus_thread">
