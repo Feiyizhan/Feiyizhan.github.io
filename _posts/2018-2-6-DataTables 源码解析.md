@@ -5,6 +5,7 @@ categories: ['DataTables','JavaScript']
 tags: ['DataTables','JavaScript','Bootstarp','Web front end']
 author: Feiyizhan
 description: DataTables 源码解析
+issueId: 2018-2-6 Analyse Datatables source
 ---
 * TOC
 {:toc}

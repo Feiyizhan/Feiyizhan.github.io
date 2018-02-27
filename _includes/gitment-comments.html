@@ -4,10 +4,10 @@
 <script src="{{ site.baseurl }}/assets/js/gitment.browser.js"></script>
 <script>
   var gitment = new Gitment({
-    {% if page.issueId != '' %}
-    id: '{{ page.issueId }}', // 可选。默认为 location.href
+    {% if page.issueId == '' %}
+    id: 'home', // 可选。默认为 location.href
     {% else %}	  
-    id: 'home',
+    id: '{{ page.issueId }}',
     {% endif %}                        
     owner: 'Feiyizhan',
     repo: 'Feiyizhan.github.io',

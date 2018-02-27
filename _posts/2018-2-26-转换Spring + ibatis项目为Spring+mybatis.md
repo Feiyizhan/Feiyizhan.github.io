@@ -5,6 +5,7 @@ categories: ['java','spring','ibaits','mybatis','maven']
 tags: ['java','spring','ibaits','mybatis','maven'] 
 author: Feiyizhan
 description: 转换Spring + ibatis项目为Spring+mybatis
+issueId: 2018-2-26 Convert Spring+ibaits to Spring+mybatis
 ---
 * TOC
 {:toc}
