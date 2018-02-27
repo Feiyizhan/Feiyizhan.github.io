@@ -22,8 +22,8 @@ date_format:
 lan: "cn" 
 
 # 开启评论
-comments:true
-gitment:on
+comments: true
+gitment: on
 
 paginate: 10
 
