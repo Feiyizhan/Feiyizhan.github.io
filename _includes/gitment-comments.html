@@ -4,7 +4,9 @@
 <script src="{{ site.baseurl }}/assets/js/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  //id: '页面 ID', // 可选。默认为 location.href
+  {% if page.title != '' %}
+  id: '{{ page.title }}', // 可选。默认为 location.href
+  {% endif %}                        
   owner: 'Feiyizhan',
   repo: 'Feiyizhan.github.io',
   oauth: {
