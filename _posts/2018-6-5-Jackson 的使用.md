@@ -45,8 +45,8 @@ issueId: 2018-6-5 The use of Jackson
 ## 简单的泛型对象反系列化
 jackson处理一般的JavaBean和Json之间的转换只要使用ObjectMapper 对象的readValue和writeValueAsString两个方法就能实现。但是如果要转换复杂类型Collection如 List<YourBean>，那么就需要先反序列化复杂类型 为泛型的Collection Type。
 
-如果是ArrayList<YourBean>那么使用ObjectMapper 的getTypeFactory().constructParametricType(collectionClass, elementClasses);
-如果是HashMap<String,YourBean>那么 ObjectMapper 的getTypeFactory().constructParametricType(HashMap.class,String.class, YourBean.class);
+如果是`ArrayList<YourBean>`那么使用`ObjectMapper 的getTypeFactory().constructParametricType(collectionClass, elementClasses)`;
+如果是`HashMap<String,YourBean>`那么 ObjectMapper 的`getTypeFactory().constructParametricType(HashMap.class,String.class, YourBean.class)`;
 
 ```java
  public final ObjectMapper mapper = new ObjectMapper();
