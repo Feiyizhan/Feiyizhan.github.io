@@ -18,7 +18,8 @@ issueId: 2018-6-5 Spring Boot Global Process
 1. 在执行@RequestMapping时，进入逻辑处理阶段前。如传的参数类型错误。
 2. 在controller里执行逻辑代码时出的异常。如NullPointerException。 
 
-使用`@ControllerAdvice`注解，代码如下：
+使用`@ControllerAdvice`注解，代码如下:
+
 ```java
 /**
  * 全局异常处理
@@ -179,7 +180,8 @@ Spring Boot是使用Jackson进行参数的反系列化和响应的系列化处�
 方法：
 1. 使用`@JsonComponent`注解构建一个指定目标类型的Json系列化和反系列化处理组件。参考官方文档：[Custom JSON Serializers and Deserializers](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-json-components)
 
-2. 使用`@Configuration`注解构建一个配置类，创建一个方法返回`com.fasterxml.jackson.databind.Module` ，并使用`@Bean`注解该方法。参考[Customize the Jackson ObjectMapper](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-customize-the-jackson-objectmapper)，代码如下：
+2. 使用`@Configuration`注解构建一个配置类，创建一个方法返回`com.fasterxml.jackson.databind.Module` ，并使用`@Bean`注解该方法。参考[Customize the Jackson ObjectMapper](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-customize-the-jackson-objectmapper)，代码如下:
+
 ```java
 @Bean
 public com.fasterxml.jackson.databind.Module customeJackSonModule() {
