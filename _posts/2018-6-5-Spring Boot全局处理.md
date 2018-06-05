@@ -2,7 +2,7 @@
 layout: post
 title:  "Spring Boot全局处理"
 categories: ['Spring','Spring Boot']
-tags: ['Spring','Srping Boot'] 
+tags: ['Spring','Spring Boot'] 
 author: Feiyizhan
 description: Spring Boot全局处理
 issueId: 2018-6-5 Spring Boot Global Process
