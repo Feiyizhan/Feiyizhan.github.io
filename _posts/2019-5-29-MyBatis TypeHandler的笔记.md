@@ -64,19 +64,23 @@ public class MyStringTypeHandle extends BaseTypeHandler<String> {
 
 #####   在`Spring Boot`的配置文件增加`type-handlers-package`的配置
 `type-handlers-package`的配置的值为`TypeHandler`的包名即可，即在`application.properties`文件增加以下配置：
+
 ```
 mybatis.type-handlers-package=com.xxx.typehandler
 ```
+
 > 该配置会被`org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration`读取，并调用`org.mybatis.spring.SqlSessionFactoryBean`来完成`TypeHandler`的初始化。
 
 #####  在`Spring Boot`指定MyBatisConfig文件的路径，之后在MyBatisConfig中配置`typeHandlers`
 配置如下：
 -  在`application.properties`文件增加以下配置：
+
 ```
 mybatis.config-location=classpath:mybatis-config.xml
 ```
 
 - 在`mybatis-config.xml`文件增加以下配置：
+
 ```xml
 <configuration>
 	<typeHandlers>
@@ -89,6 +93,7 @@ mybatis.config-location=classpath:mybatis-config.xml
 >注：如果在`application.properties`文件指定了`mybatis.configuration` ，又同时配置`mybatis.config-location`,则需要把`application.properties`的`mybatis.configuration`的配置移到`mybatis-config.xml`文件里。否则启用会校验失败。
 
 - 也可以直接在`mybatis-config.xml`配置指定的`typeHandler`类
+
 ```xml
 <configuration>
 	<typeHandlers>
@@ -96,6 +101,7 @@ mybatis.config-location=classpath:mybatis-config.xml
 	</typeHandlers>
 </configuration>
 ```
+
 >  注：无法在`application.properties`文件直接配置`typeHandler`类，因为虽然`org.mybatis.spring.SqlSessionFactoryBean`有`setTypeHandlers(TypeHandler<?>[] typeHandlers)`方法，但`org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration`并没有去`application.properties`读取相关的配置并设置调用该方法。
 
 #### 限定`JavaType` 和 `JdbcType`
@@ -142,6 +148,7 @@ public class MyStringTypeHandle extends BaseTypeHandler<String> {
 > 
 
 - 在`mybatis-config.xml`的`<typeHandlers>`的`<typeHandler>`节点的属性上设置
+
 ```xml
 <configuration>
 	<typeHandlers>
