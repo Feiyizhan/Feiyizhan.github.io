@@ -1,5 +1,5 @@
 ---
-layout: MyBatis 
+layout: post 
 title:  "MyBatis TypeHandler的笔记"
 categories: ['MyBatis ']
 tags: ['MyBatis','Spring Boot'] 
