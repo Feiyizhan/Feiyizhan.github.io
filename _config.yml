@@ -26,7 +26,7 @@ comments: true
 gitment: on
 
 #设置分页的每页文章数
-paginate: 5
+paginate: 6
 
 #[ maruku | rdiscount | kramdown | redcarpet ]
 highlighter: rouge
