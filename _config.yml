@@ -25,7 +25,8 @@ lan: "cn"
 comments: true
 gitment: on
 
-paginate: 10
+#设置分页的每页文章数
+paginate: 5
 
 #[ maruku | rdiscount | kramdown | redcarpet ]
 highlighter: rouge
