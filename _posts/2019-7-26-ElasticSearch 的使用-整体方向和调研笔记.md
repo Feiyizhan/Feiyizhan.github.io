@@ -698,7 +698,10 @@ Fielddata is disabled on text fields by default. Set fielddata=true on [interest
 
 ## 其他相关笔记
 
-[ElasticSearch 的使用-查询](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E6%9F%A5%E8%AF%A2.html)
-[ElasticSearch 的使用-高亮查询](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E9%AB%98%E4%BA%AE%E6%9F%A5%E8%AF%A2.html)
-[ElasticSearch 的使用-数据导入](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5.html)
-[ElasticSearch 的使用-关键字补全](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%85%B3%E9%94%AE%E5%AD%97%E8%A1%A5%E5%85%A8.html)
+- [ElasticSearch 的使用-查询](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E6%9F%A5%E8%AF%A2.html)
+
+- [ElasticSearch 的使用-高亮查询](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E9%AB%98%E4%BA%AE%E6%9F%A5%E8%AF%A2.html)
+
+- [ElasticSearch 的使用-数据导入](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5.html)
+
+- [ElasticSearch 的使用-关键字补全](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%85%B3%E9%94%AE%E5%AD%97%E8%A1%A5%E5%85%A8.html)
