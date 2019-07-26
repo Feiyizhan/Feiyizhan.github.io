@@ -548,7 +548,7 @@ PUT /test/_settings
 
 #### 调研问题列表
 - [x] Mysql 数据迁移到ES 的方案？
-	- 编写程序手动执行，具体的同步程序见另外一篇笔记。
+	- 编写程序手动执行，详情见笔记：[ElasticSearch 的使用-数据导入](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5.html)
 
 - [x] ES 索引配置多环境同步的处理方案。
 	- [x] 手动在Kibana上执行命令。
@@ -572,7 +572,7 @@ PUT /test/_settings
 				- 必须重建索引。
 
 - [x] 关键字补全的方案
-	- 使用`Suggestion` 实现，参考[search-suggesters-completion](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/search-suggesters-completion.html)，具体的实现见另一篇笔记。
+	- 使用`Suggestion` 实现，参考[search-suggesters-completion](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/search-suggesters-completion.html)，详情见笔记：[ElasticSearch 的使用-关键字补全](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%85%B3%E9%94%AE%E5%AD%97%E8%A1%A5%E5%85%A8.html)
 
 - [x] 查询语法
 	- [x] 查询单个doc记录
@@ -580,11 +580,11 @@ PUT /test/_settings
 	- [x] 关联查询
 		- 不推荐使用关联查询
 	- [x] 分页查询
-		- 使用from+size查询参数
+		- 使用from+size查询参数,详情见笔记：[ElasticSearch 的使用-查询](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E6%9F%A5%E8%AF%A2.html)
 	- [x] 统计查询
 		- 暂不使用
 	- [x] 高亮查询
-		- 使用`Highlighter` 实现，参考[search-request-highlighting](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/search-request-highlighting.html)，具体的实现 见另一篇笔记。
+		- 使用`Highlighter` 实现，参考[search-request-highlighting](https://www.elastic.co/guide/en/elasticsearch/reference/5.5/search-request-highlighting.html)，详情见笔记：[ElasticSearch 的使用-高亮查询](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E9%AB%98%E4%BA%AE%E6%9F%A5%E8%AF%A2.html)。
 - [x] 修改索引数据
 	- [x] 修改字段值
 		- [x] 非嵌套字段
@@ -626,6 +626,8 @@ PUT /test/_settings
 - 所有的索引都必须使用别名访问。
 - keyword 字段长度通过ignore_above参数控制，超过这个参数值的字符将不会被索引。
 - ReIndex 操作源Index和目标Index的字段类型不是所有类型直接都可以互转。
+- 尽量将ElasticSearch作为一个只读数据，用于解决多关键分词模糊匹配的分页查询效率问题，而不是把他作为一个主数据库使用。
+- ElasticSearch 集群如果只有两个节点，在某个节点崩溃时，会导致数据丢失。
 
 
 ### ElasticSearch Server端
@@ -635,12 +637,12 @@ PUT /test/_settings
 
 - [x] ES Server是自己搭建还是购买阿里云ES服务器
 	- ES不自己搭建，使用阿里云提供的ES服务器，参考[阿里云ElasticSearch介绍](https://help.aliyun.com/document_detail/57770.html?spm=a2c4g.11186623.6.542.2992189cTKXVzz)
-- [ ] 阿里云ES服务器如何选择？
+- [x] 阿里云ES服务器如何选择？
 	- 开发使用1核2G，2节点，50G云盘
 	- 其他使用2核4G，3节点，50G本地SSD
 - [x] 阿里云ES服务器版本？
 	-	阿里云ES版本为6.3.1
-- [ ] 阿里云ES服务器要怎么管理，包括账号密码、VPC、权限、ES Server本身的配置等
+- [x] 阿里云ES服务器要怎么管理，包括账号密码、VPC、权限、ES Server本身的配置等
 	- 除了开发的ES服务器开启外网访问，其他只允许内网访问。同时Kibana开启IP白名单访问。
 
 ### ElasticSearch Client 端
@@ -693,3 +695,10 @@ Fielddata is disabled on text fields by default. Set fielddata=true on [interest
 - 良好的ES性能的关键是将数据去规范化为文档。JOIN字段会带来额外的性能开销。参考[parent_join_and_performance](https://www.elastic.co/guide/en/elasticsearch/reference/6.3/parent-join.html#_parent_join_and_performance)
 
 - Mapping创建好之后不能修改，但可以通过别名方式变相修改。即创建设置Index和Index的别名。操作的时候使用Index的别名，需要修改的时候，建一个新的Index，然后修改别名关联新的Index即可。参考[elasticsearch 修改 mapping](https://blog.csdn.net/lengfeng92/article/details/38230521)
+
+## 其他相关笔记
+
+[ElasticSearch 的使用-查询](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E6%9F%A5%E8%AF%A2.html)
+[ElasticSearch 的使用-高亮查询](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E9%AB%98%E4%BA%AE%E6%9F%A5%E8%AF%A2.html)
+[ElasticSearch 的使用-数据导入](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5.html)
+[ElasticSearch 的使用-关键字补全](https://feiyizhan.github.io/elasticsearch/2019/07/26/ElasticSearch-%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%85%B3%E9%94%AE%E5%AD%97%E8%A1%A5%E5%85%A8.html)
