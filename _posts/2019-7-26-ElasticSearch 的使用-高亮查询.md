@@ -36,7 +36,7 @@ public OrderAllInfoResult getOrderAllInfo(Integer id, OrderSearchParameter searc
             HighlightBuilder highlightBuilder = getOrderNotNestHighlightBuilder(OrderSearchParameter .ALL);
             searchSourceBuilder.highlighter(highlightBuilder);
             searchSourceBuilder.query(boolQueryBuilder);
-            // 获取钉钉全部信息
+            // 获取钉单全部信息
             return orderEsService.searchOrderAllInfo(searchSourceBuilder);
         } else {
             return orderEsService.getOrderById(id);
