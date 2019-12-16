@@ -111,7 +111,9 @@ server.port=443
 ## 同时支持HTTP和HTTPS
 
 默认只支持HTTP或HTTPS，如果需要同时支持HTTP + HTTPS，则需要增加额外的代码配置，来启用HTTP或者HTTPS。
-由于HTTP配置相对简单，因此建议HTTPS走配置文件，HTTP走代码配置。
+由于HTTP配置相对简单，因此建议HTTPS走配置文件，HTTP走代码配置。也可以都走代码方式配置。
+
+全部走代码方式的配置如下：
 
 在配置文件增加如下配置：
 ```
