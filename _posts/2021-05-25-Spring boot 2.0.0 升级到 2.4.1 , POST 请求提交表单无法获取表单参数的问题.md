@@ -5,7 +5,7 @@ categories: ['Spring Boot']
 tags: ['Spring Boot'] 
 author: Feiyizhan
 description: Spring boot 2.0.0 升级到 2.4.1 , POST 请求提交表单无法获取表单参数的问题
-issueId: 2021-05-25 Spring boot2.0.0->2.4.1POST请求无法获取表单参数的问题
+issueId: 2021-05-25 Spring boot2.0.0升级到2.4.1POST请求无法获取表单参数的问题
 
 ---
 * TOC
