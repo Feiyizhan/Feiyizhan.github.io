@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "HTTP Client SSL证书授信问题处理"
-categories: ['Java','SSL','HTTP client']
-tags: : ['Java','SSL','HTTP client']
+categories: ['Java','SSL']
+tags: : ['Java','SSL']
 author: Feiyizhan
 description: HTTP Client SSL证书授信问题处理
 issueId: 2021-10-21 HTTP Client SSL证书授信问题处理
