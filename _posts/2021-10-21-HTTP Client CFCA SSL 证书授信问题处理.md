@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "HTTP Client SSL证书授信问题处理"
-categories: ['Algorithms']
-tags: ['Algorithms'] 
+title:  "HTTP Client CFCA SSL证书授信问题处理"
+categories: ['Java','SSL','HTTPS']
+tags: ['Java','SSL','HTTPS'] 
 author: Feiyizhan
-description: HTTP Client SSL证书授信问题处理
-issueId: 2021-10-21 HTTP Client SSL证书授信问题处理
+description: HTTP Client CFCA SSL证书授信问题处理
+issueId: 2021-10-21 HTTP Client CFCA SSL证书授信问题处理
 
 ---
 * TOC
