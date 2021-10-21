@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "HTTP证书授信问题处理"
+title:  "HTTP Client证书授信问题处理"
 categories: ['Algorithms']
 tags: ['Algorithms'] 
 author: Feiyizhan
-description: HTTP证书授信问题处理
-issueId: 2021-10-21 HTTP证书授信问题处理
+description: HTTP Client证书授信问题处理
+issueId: 2021-10-21 HTTP Client证书授信问题处理
 
 ---
 * TOC
