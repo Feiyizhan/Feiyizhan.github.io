@@ -22,8 +22,9 @@ date_format:
 lan: "cn" 
 
 # 开启评论
-comments: true
-gitment: on
+#comments: true
+#gitment: on
+
 
 #设置分页的每页文章数
 paginate: 6
@@ -52,3 +53,20 @@ defaults:
 #      type: "pages"  
     values:
       author: "Feiyizhan"
+
+# Giteement 
+# 关于如何集成:https://www.jianshu.com/p/f5c4633524c7
+# 基于码云的评论系统(https://gitee.com/zhousiwei/giteement)
+giteement:
+  enable: true  # 是否启用码云评论系统
+  # 是否使用官方js(false可以提升访问速度)
+  remote: false
+  redirect_uri: 'https://feiyz.gitee.io/'   # 应用回调地址(请和配置的第三方应用保持一致)
+  # 不能更改(网上开源项目https://github.com/Rob--W/cors-anywhere作者提供的专门用来跨域服务器的配置)
+  oauth_uri: https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token
+  giteeID: 'FeiYZ'  # 你的码云账号英文名
+  # 存储评论的 repo name(需要在码云仓库创建公开仓库)
+  repo: 'FeiYZ'
+  gitment_oauth:
+    client_id: '19412818d226b8520f75922d8b5d6e96a035aeaa74d83d0d0af7c09fc68424e1'           #client ID
+    client_secret: '95a80f363bfc0ebae83f3d017dee9b224ef7cd2e9bf6eb564fe17525e87f4bb0'       #client secret      

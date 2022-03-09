@@ -1,23 +1,26 @@
 {% if site.comments and site.gitment != '' %}
-<div id="container"></div>
+<div id="giteementDiv"></div>
 <!--
 <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/gitment-default.css">
 <script src="{{ site.baseurl }}/assets/js/gitment.browser.js"></script>
 -->
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/gitment.css">
-<script src="{{ site.baseurl }}/assets/js/gitment.js"></script>
-<script>
-  var gitment = new Gitment({
-    {% if page.id and page.issueId %}
-    id: '{{ page.issueId }}', // 可选。默认为 location.href
-    {% endif %}                        
-    owner: 'Feiyizhan',
-    repo: 'Feiyizhan.github.io',
-    oauth: {
-      client_id: 'd022803a97cc447b6a53',
-      client_secret: '736a42a5755fbb158d3c2d9faf9777c103358421',
-    },
-  })
-  gitment.render('container')
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/giteement-default">
+<script src="{{ site.baseurl }}/assets/js/giteement.browser.js"></script>
+
+
+<script type="text/javascript">
+    var giteement = new Giteement({
+      id: '{{ page.issueId }}',,
+      owner: '{{site.giteement.giteeID}}',
+      repo: '{{site.giteement.repo}}',
+      backcall_uri: '{{site.giteement.redirect_uri}}',
+      oauth_uri: '{{site.giteement.oauth_uri}}',
+      oauth: {
+        client_id: '{{site.giteement.gitment_oauth.client_id}}',
+        client_secret: '{{site.giteement.gitment_oauth.client_secret}}'
+      },
+    });
+    giteement.render('giteementDiv');
 </script>
+
 {% endif %}
